@@ -2,12 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { format } from "date-fns";
 import ReactCountryFlag from "react-country-flag";
 import ptBR from "date-fns/locale/pt-BR";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
 
 import Button from "@/components/Button";
 

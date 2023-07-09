@@ -3,8 +3,6 @@ import { NextResponse } from "next/server";
 
 export async function GET(request: Request, { params: { userId } }: { params: { userId: string } }) {
 
-    console.log({ userId });
-
     if (!userId) {
         return {
             status: 400,
@@ -22,8 +20,6 @@ export async function GET(request: Request, { params: { userId } }: { params: { 
             trip: true,
         },
     });
-
-    console.log({ reservations });
 
     return new NextResponse(JSON.stringify(reservations), { status: 200 });
 }
